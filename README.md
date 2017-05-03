@@ -1,9 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Lister
 
-Things you may want to cover:
+An open-source list maker. Find out more by going to the [coding jaunt blog](http://codingjaunt.com)
+
+TODO fill the rest of this out.
 
 * Ruby version
 
