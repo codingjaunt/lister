@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# TODO When bundler 2 comes out remove the github source
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -36,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # RSpec Rails - testing is next to cleanliness
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara', '~> 2.14'
 end
 
 group :development do
