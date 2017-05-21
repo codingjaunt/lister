@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Authorization
+gem 'devise', '~> 4.3.0'
 
 gem 'webpacker', '~> 1.2'
 
