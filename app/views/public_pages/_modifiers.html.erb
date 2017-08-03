@@ -2,8 +2,13 @@
 
 <% provide(:header_right_nav) do %>
     <li>
+      <p class="navbar-link">
+        <%= render "account" %>
+      </p>
+    </li>
+    <li>
       <p class="navbar-btn">
-        <a href="#" class="btn btn-primary">Login</a>
+        <%= render "login_or_logout" %>
       </p>
     </li>
 <% end %>
