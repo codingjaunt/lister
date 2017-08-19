@@ -1,0 +1,21 @@
+inherit_from: .rubocop_todo.yml
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - node_modules/**/*
+    - bin/**/*
+    - db/migrate/**/*
+    - config/initializers/devise.rb
+    - config/spring.rb
+    - config/puma.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/production.rb'
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Max: 120
+
+Style/EmptyMethod:
+  EnforcedStyle: 'expanded'
