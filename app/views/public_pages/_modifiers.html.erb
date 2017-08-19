@@ -1,15 +1,14 @@
 <% provide(:title, "Home") %>
 
 <% provide(:header_right_nav) do %>
-    <li>
-      <p class="navbar-link">
+    <span class="mr-auto"></span>
+    <ul class="navbar-nav">
+      <li class="nav-item">
         <%= render "account" %>
-      </p>
-    </li>
-    <li>
-      <p class="navbar-btn">
+      </li>
+      <li class="nav-btn">
         <%= render "login_or_logout" %>
-      </p>
-    </li>
+      </li>
+    </ul>
 <% end %>
 

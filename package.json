@@ -6,7 +6,7 @@
     "babel-core": "^6.24.1",
     "babel-loader": "7.x",
     "babel-preset-env": "^1.4.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "4.0.0-alpha.6",
     "coffee-loader": "^0.7.3",
     "coffee-script": "^1.12.5",
     "compression-webpack-plugin": "^0.4.0",
@@ -24,6 +24,7 @@
     "rails-erb-loader": "^5.0.0",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
+    "tether": "^1.4.0",
     "webpack": "^2.5.1",
     "webpack-manifest-plugin": "^1.1.0",
     "webpack-merge": "^4.1.0"

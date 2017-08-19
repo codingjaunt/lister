@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><%= yield :title %> | Lister</title>
   <%= csrf_meta_tags %>
 
@@ -9,9 +11,27 @@
 </head>
 
 <body>
+<!-- Header -->
 <%= render 'layouts/header' %>
-<%= render 'layouts/flash' %>
-<%= yield %>
-<%= render 'layouts/footer' %>
+<div class="container">
+  <!-- Flash messages -->
+  <div class="row">
+    <%= render 'layouts/flash' %>
+  </div>
+
+
+  <!-- Main content -->
+  <div class="row">
+    <div class="col">
+      <%= yield %>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="row">
+    <%= render 'layouts/footer' %>
+  </div>
+</div>
+
 </body>
 </html>
