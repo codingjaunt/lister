@@ -30,7 +30,7 @@ RSpec.feature 'Account Management', type: :feature do
       fill_in 'Current password', with: admin_password
       click_on 'Update'
       expect(page).to have_current_path(root_path)
-      expect(page).to have_selector('.notice', text: password_successful)
+      expect(page).to have_selector('.alert-info', text: password_successful)
 
       click_on 'Logout'
       click_on 'Login'
@@ -52,11 +52,11 @@ RSpec.feature 'Account Management', type: :feature do
       fill_in 'Password', with: admin_password
       fill_in 'Password confirmation', with: admin_password
       click_on 'Sign up'
-      expect(page).to have_selector('.notice', text: email_sent)
+      expect(page).to have_selector('.alert-info', text: email_sent)
       expect(page).to have_current_path(root_path)
 
       visit generated_link
-      expect(page).to have_selector('.notice', text: account_created)
+      expect(page).to have_selector('.alert-info', text: account_created)
       expect(page).to have_current_path(new_user_session_path)
     end
   end
@@ -75,14 +75,14 @@ RSpec.feature 'Account Management', type: :feature do
 
   def expect_user_to_login_and_go_to_root
     click_on 'Login'
-    expect(page).to have_selector('.notice', text: session_new_alert)
+    expect(page).to have_selector('.alert-info', text: session_new_alert)
     expect(page).to have_current_path(root_path)
   end
 
   def expect_user_to_be_able_to_logout
     click_on 'Logout'
     expect(page).to have_current_path(root_path)
-    expect(page).to have_selector('.notice', text: session_destroy_alert)
+    expect(page).to have_selector('.alert-info', text: session_destroy_alert)
   end
 
   def generated_link
