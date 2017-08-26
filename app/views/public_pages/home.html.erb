@@ -1,10 +1,17 @@
 <%= render 'modifiers' %>
 <main>
   <section id="about">
-    This should explain what this page is about.
+    <div class="jumbotron">
+      <p>
+        <i class="fa fa-list-ol"></i>
+        Make lists, share with friends, attack each others oppinions.
+      </p>
+      <hr class="my-4">
+      New User?<br>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+    </div>
   </section>
   <section id="signup">
-    New User?
-    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-default" %>
+
   </section>
 </main>

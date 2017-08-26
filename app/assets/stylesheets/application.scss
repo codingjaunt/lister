@@ -13,13 +13,9 @@
  *= require_tree .
  *= require_self
  *= require bootstrap/dist/css/bootstrap
+ *= require font-awesome/css/font-awesome.min
  */
 
 body {
   padding-top: 4em;
-}
-
-footer {
-  border-top: 1px solid black;
-  margin-top: 1rem;
 }
