@@ -43,6 +43,7 @@ group :development, :test do
   # RSpec Rails - testing is next to cleanliness
   gem 'capybara', '~> 2.14'
   gem 'rspec-rails', '~> 3.5'
+  gem 'selenium-webdriver'
 end
 
 group :development do

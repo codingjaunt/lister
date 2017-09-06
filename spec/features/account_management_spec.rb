@@ -29,7 +29,7 @@ RSpec.feature 'Account Management', type: :feature do
       fill_in 'Password confirmation', with: new_password
       fill_in 'Current password', with: admin_password
       click_on 'Update'
-      expect(page).to have_current_path(root_path)
+      expect(page).to have_current_path(home_show_path)
       expect(page).to have_selector('.alert-info', text: password_successful)
 
       click_on 'Logout'
@@ -76,7 +76,7 @@ RSpec.feature 'Account Management', type: :feature do
   def expect_user_to_login_and_go_to_root
     click_on 'Login'
     expect(page).to have_selector('.alert-info', text: session_new_alert)
-    expect(page).to have_current_path(root_path)
+    expect(page).to have_current_path(home_show_path)
   end
 
   def expect_user_to_be_able_to_logout

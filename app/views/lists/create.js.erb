@@ -1,0 +1,12 @@
+// Define
+function show_lists() {
+  $('#lister-lists').replaceWith("<%= escape_javascript(render 'lists/index') %>");
+};
+
+function clear_list_name() {
+  $('input[name="list[name]"]').val("");
+};
+
+// Execute
+show_lists();
+clear_list_name();
