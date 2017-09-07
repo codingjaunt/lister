@@ -1,0 +1,7 @@
+naughty:
+  name: "Naughty List"
+  user: santa
+
+nice:
+  name: "Nice List"
+  user: santa

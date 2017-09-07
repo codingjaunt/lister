@@ -1,8 +1,9 @@
 # List Record
 class List < ApplicationRecord
-  has_one :user
+  belongs_to :user
 
   validates :name, presence: true,
                    allow_blank: false,
-                   length: { maximum: 255 }
+                   length: { maximum: 255 },
+                   uniqueness: true
 end
