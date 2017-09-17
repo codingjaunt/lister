@@ -3,15 +3,10 @@ function show_lists() {
   $('#lister-lists').replaceWith("<%= escape_javascript(render 'lists/index') %>");
 };
 
-function clear_list_name() {
-  $('input[name="list[name]"]').val("");
-};
-
 function show_flash() {
   $(".lister-flash").replaceWith("<%= j(render partial: "layouts/flash")  %>")
 }
 
 // Execute
 show_lists();
-clear_list_name();
 show_flash();

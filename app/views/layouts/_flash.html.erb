@@ -1,13 +1,10 @@
-<div class="col">
+<div class="col lister-flash">
   <% if notice %>
-      <div class="alert alert-info" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <i class="fa fa-times"></i>
-        </button>
-        <p><%= notice %></p>
-      </div>
+      <%= render partial: 'layouts/flash_message', locals: { messages: flash_messages(notice),
+                                                             message_class: 'alert-info' } %>
   <% end %>
   <% if alert %>
-      <p class="alert alert-warning" role="alert"><%= alert %></p>
-  <% end %>
+  <%= render partial: 'layouts/flash_message', locals: { messages: flash_messages(alert),
+                                                         message_class: 'alert-warning' } %>
+      <% end %>
 </div>

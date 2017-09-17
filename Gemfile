@@ -42,8 +42,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # RSpec Rails - testing is next to cleanliness
   gem 'capybara', '~> 2.14'
+  gem 'poltergeist'
   gem 'rspec-rails', '~> 3.5'
-  gem 'selenium-webdriver'
 end
 
 group :development do

@@ -25,31 +25,31 @@ RSpec.describe ListsFacade, type: :facade do
     end
   end
 
-  describe '.index' do
-    subject { ListsFacade.index(user: user) }
+  # describe '.index' do
+  #   subject { ListsFacade.index(user: user) }
+  #
+  #   it 'to set list and lists' do
+  #     expect(user).to receive(:lists).and_return(:lists)
+  #     expect(ListsFacade).to receive(:new_list).and_return(:list)
+  #
+  #     expect(subject.list).to eq(:list)
+  #     expect(subject.lists).to eq(:lists)
+  #   end
+  # end
 
-    it 'to set list and lists' do
-      expect(user).to receive(:lists).and_return(:lists)
-      expect(ListsFacade).to receive(:new_list).and_return(:list)
-
-      expect(subject.list).to eq(:list)
-      expect(subject.lists).to eq(:lists)
-    end
-  end
-
-  describe '.create' do
-    let(:params) { ActionController::Parameters.new(list: { name: 'Hello' }) }
-    let(:lists) { double('Lists') }
-    let(:list) { double('list') }
-    subject { ListsFacade.create(user: user, params: params) }
-
-    it 'creates new list from parameters and gets updated user list' do
-      expect(ListsFacade).to receive(:lists).and_return(lists)
-      expect(ListsFacade).to receive(:create_list).with(params: params, lists: lists).and_return(:list)
-      expect(lists).to receive(:reload).and_return(:lists)
-
-      expect(subject.list).to eq(:list)
-      expect(subject.lists).to eq(:lists)
-    end
-  end
+  # describe '.create' do
+  #   let(:params) { ActionController::Parameters.new(list: { name: 'Hello' }) }
+  #   let(:lists) { double('Lists') }
+  #   let(:list) { double('list') }
+  #   subject { ListsFacade.create(user: user, params: params) }
+  #
+  #   it 'creates new list from parameters and gets updated user list' do
+  #     expect(ListsFacade).to receive(:lists).and_return(lists)
+  #     expect(ListsFacade).to receive(:create_list).with(params: params, lists: lists).and_return(:list)
+  #     expect(lists).to receive(:reload).and_return(:lists)
+  #
+  #     expect(subject.list).to eq(:list)
+  #     expect(subject.lists).to eq(:lists)
+  #   end
+  # end
 end
